@@ -10,7 +10,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://libristracker.up.railway.app",
+    ],
     allow_methods=["GET"],
     allow_headers=["*"],
 )
